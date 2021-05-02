@@ -20,14 +20,12 @@ public class Calculator {
         return firstOperand + secondOperand;
     }
 
-    public int subtract(int firstOperand, int secondOperand) {
-        throw new UnsupportedOperationException();
-    }
+    public int subtract(int firstOperand, int secondOperand) { return firstOperand - secondOperand; }
 
     public double divide(double dividend, double divisor) {
         if (divisor == 0) throw new java.lang.ArithmeticException("/ by zero");
 
-        //  return round(dividend/divisor, 2);
+      //  return round(dividend/divisor, 2);
         return dividend / divisor;
     }
 
@@ -36,6 +34,12 @@ public class Calculator {
     }
 
     public int factorial(int firstOperand) {
-        throw new UnsupportedOperationException();
+
+        int fact = 1;
+        for (int i = 2; i <= firstOperand; i++) {
+            fact = fact * i;
+        }
+        return fact;
+
     }
 }

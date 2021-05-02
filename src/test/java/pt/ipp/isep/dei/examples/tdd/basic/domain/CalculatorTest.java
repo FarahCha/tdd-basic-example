@@ -69,6 +69,156 @@ public class CalculatorTest {
         assertEquals(expectedResult, result);
     }
 
+    @Test
+    public void sumFirstOperandZero() {
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int firsOperand = 0;
+        int secondOperand = 10;
+        int expectedResult = 10;
+        int result = 10;
+
+        // Act
+        result = new Calculator().sum(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    public void sumSecondOperandZero() {
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int firsOperand = 10;
+        int secondOperand = 0;
+        int expectedResult = 10;
+        int result = 10;
+
+        // Act
+        result = new Calculator().sum(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    public void sumBothOperandsZero() {
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int firsOperand = 0;
+        int secondOperand = 0;
+        int expectedResult = 0;
+        int result = 0;
+
+        // Act
+        result = new Calculator().sum(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    public void sumWithLargeNumbers() {
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int firsOperand = 500000000;
+        int secondOperand = 500000000;
+        int expectedResult = 1000000000;
+        int result = 1000000000;
+
+        // Act
+        result = new Calculator().sum(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    public void subtractFiveMinusFive() {
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int firsOperand = 5;
+        int secondOperand = 5;
+        int expectedResult = 0;
+        int result = 0;
+
+        // Act
+        result = new Calculator().subtract(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+    @Test
+    public void subtractWithZero() {
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int firsOperand = 5;
+        int secondOperand = 0;
+        int expectedResult = 5;
+        int result = 5;
+
+        // Act
+        result = new Calculator().subtract(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    public void subtractWithNegative() {
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int firsOperand = 5;
+        int secondOperand = -10;
+        int expectedResult = 15;
+        int result = 15;
+
+        // Act
+        result = new Calculator().subtract(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    @Test
+    public void subtractWithLargeNumbers() {
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        int firsOperand = 1000000000;
+        int secondOperand = 500000000;
+        int expectedResult = 500000000;
+        int result = 500000000;
+
+        // Act
+        result = new Calculator().subtract(firsOperand, secondOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
     /**
      * Test to ensure positive and negative numbers are summed correctly.<p>
      * <p>
@@ -95,6 +245,8 @@ public class CalculatorTest {
         // Assert
         assertEquals(expectedResult, result);
     }
+
+
 
     /**
      * Test to ensure positive and positive numbers are divided correctly.<p>
@@ -302,7 +454,7 @@ public class CalculatorTest {
      * Assert the  result should be eighteen.
      */
     @Test
-    public void ensureSixMultipliedByThreeEuqalsEighteen() {
+    public void ensureSixMultipliedByThreeEqualsEighteen() {
         //HACK: for demonstration purposes only
         System.out.println("\t\tExecuting " + new Object() {
         }.getClass().getEnclosingMethod().getName() + " Test");
@@ -329,7 +481,7 @@ public class CalculatorTest {
      * Assert the  result should be negative eighteen.
      */
     @Test
-    public void ensureMinusSixMultipliedByThreeEuqalsMinusEighteen() {
+    public void ensureMinusSixMultipliedByThreeEqualsMinusEighteen() {
         //HACK: for demonstration purposes only
         System.out.println("\t\tExecuting " + new Object() {
         }.getClass().getEnclosingMethod().getName() + " Test");
@@ -356,7 +508,7 @@ public class CalculatorTest {
      * Assert the  result should be negative eighteen.
      */
     @Test
-    public void ensureMinusSixCommaSixMultipliedByThreeEuqalsMinusEighteen() {
+    public void ensureMinusSixCommaSixMultipliedByThreeEqualsMinusEighteen() {
         //HACK: for demonstration purposes only
         System.out.println("\t\tExecuting " + new Object() {
         }.getClass().getEnclosingMethod().getName() + " Test");
@@ -378,7 +530,7 @@ public class CalculatorTest {
      * Test to ensure multiply by zero works.<p>
      * <p>
      * For demonstration purposes the Arrange/Act/Assert syntax is used:<p>
-     * Arranje a 0 and  a  number (three)<p>
+     * Arrange a 0 and  a  number (three)<p>
      * Act I multiply 0 with  three<p>
      * Assert the  result should be zero.
      */
@@ -402,6 +554,187 @@ public class CalculatorTest {
     }
 
 
+    /**
+     * Test to ensure that factorial zero is one.<p>
+     * <p>
+     * For demonstration purposes the Arrange/Act/Assert syntax is used:<p>
+     * Arrange a zero <p>
+     * Act I calculate factorial with 0 <p>
+     * Assert the  result should be one.
+     */
+    @Test
+    public void ensureFactorialByZeroGivesOne() {
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int firstOperand = 0;
+        long expectedResult = 1;
+        long result;
+
+        // Act
+        result = new Calculator().factorial(firstOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    /**
+     * Test to ensure that factorial one is one.<p>
+     * <p>
+     * For demonstration purposes the Arrange/Act/Assert syntax is used:<p>
+     * Arrange a one <p>
+     * Act I calculate factorial with 1 <p>
+     * Assert the  result should be one.
+     */
+    @Test
+    public void ensureFactorialByOneGivesOne() {
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int firstOperand = 1;
+        long expectedResult = 1;
+        long result;
+
+        // Act
+        result = new Calculator().factorial(firstOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    /**
+     * Test to ensure that factorial two is two.<p>
+     * <p>
+     * For demonstration purposes the Arrange/Act/Assert syntax is used:<p>
+     * Arrange a two <p>
+     * Act I calculate factorial with two <p>
+     * Assert the  result should be two.
+     */
+    @Test
+    public void ensureFactorialByTwoGivesTwo() {
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int firstOperand = 2;
+        long expectedResult = 2;
+        long result;
+
+        // Act
+        result = new Calculator().factorial(firstOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    /**
+     * Test to ensure that factorial five is 120.<p>
+     * <p>
+     * For demonstration purposes the Arrange/Act/Assert syntax is used:<p>
+     * Arrange a five <p>
+     * Act I calculate factorial with 5 <p>
+     * Assert the  result should be 120.
+     */
+    @Test
+    public void ensureFactorialByFiveGivesHundredTwenty() {
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int firstOperand = 5;
+        long expectedResult = 120;
+        long result;
+
+        // Act
+        result = new Calculator().factorial(firstOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    /**
+     * Test to ensure that factorial minus five is -120.<p>
+     * <p>
+     * For demonstration purposes the Arrange/Act/Assert syntax is used:<p>
+     * Arrange a minus five <p>
+     * Act I calculate factorial with -5 <p>
+     * Assert the  result should be -120.
+     */
+    @Test
+    public void ensureFactorialByMinusFiveGivesMinusHundredTwenty() {
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int firstOperand = -5;
+        long expectedResult = -120;
+        long result;
+
+        // Act
+        result = new Calculator().factorial(firstOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    /**
+     * Test to ensure that factorial minus four is 24.<p>
+     * <p>
+     * For demonstration purposes the Arrange/Act/Assert syntax is used:<p>
+     * Arrange a minus four <p>
+     * Act I calculate factorial with -4 <p>
+     * Assert the  result should be 24.
+     */
+    @Test
+    public void ensureFactorialByMinusFourGivesMinusTwentyFour() {
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int firstOperand = -4;
+        long expectedResult = 24;
+        long result;
+
+        // Act
+        result = new Calculator().factorial(firstOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
+
+    /**
+     * Test to ensure that factorial 12 is 479001600.<p>
+     * <p>
+     * For demonstration purposes the Arrange/Act/Assert syntax is used:<p>
+     * Arrange a twelve <p>
+     * Act I calculate factorial with twelve <p>
+     * Assert the  result should be 479001600.
+     */
+    @Test
+    public void ensureFactorialByTwelveGivesExpectedResult() {
+        //HACK: for demonstration purposes only
+        System.out.println("\t\tExecuting " + new Object() {
+        }.getClass().getEnclosingMethod().getName() + " Test");
+
+        // Arrange
+        int firstOperand = 12;
+        long expectedResult = 479001600;
+        long result;
+
+        // Act
+        result = new Calculator().factorial(firstOperand);
+
+        // Assert
+        assertEquals(expectedResult, result);
+    }
 }
 
 
