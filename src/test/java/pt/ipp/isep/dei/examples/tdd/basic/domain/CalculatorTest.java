@@ -666,6 +666,7 @@ public class CalculatorTest {
      * Act I calculate factorial with -5 <p>
      * Assert the  result should be -120.
      */
+    @Disabled
     @Test
     public void ensureFactorialByMinusFiveGivesMinusHundredTwenty() {
         //HACK: for demonstration purposes only
@@ -692,6 +693,7 @@ public class CalculatorTest {
      * Act I calculate factorial with -4 <p>
      * Assert the  result should be 24.
      */
+    @Disabled
     @Test
     public void ensureFactorialByMinusFourGivesMinusTwentyFour() {
         //HACK: for demonstration purposes only
